@@ -10,6 +10,7 @@ int main(){
 
     std::ifstream inputFile("../Data/Data.txt");
     if(inputFile){
+        string location = "";
         string line = "";
         string line2 = "";
 
@@ -22,19 +23,18 @@ int main(){
         while(!inputFile.eof()){
             // getline(inputFile, line, '\n');
             // getline(inputFile, line, '\n');
+            inputFile >> location;
             inputFile >> line; 
             inputFile >> line2;
+    
+            // cout<< line<<endl;
+            // cout << line2<<endl;
 
-            
-            if(line.length() != 3){
-                cout<< line<<endl;
-                cout << line2<<endl;
-            
-            }
+            avgRainfall(count1, 0) = stod(line);
+            avgRainfall(count1, 1) = stod(line2);
 
-cout << endl;
-
-
+            count1 ++;
+           
            // avgRainfall(count1, count2) = ;
 
            // value =stod(line);         
@@ -44,6 +44,8 @@ cout << endl;
         std::cout << "File now found, exiting.";
         return 0;
     }
+
+    cout << avgRainfall<<endl;
 
     
 
