@@ -23,12 +23,16 @@ int main(){
             // getline(inputFile, line, '\n');
             // getline(inputFile, line, '\n');
             inputFile >> line; 
+            inputFile >> line2;
 
             
             if(line.length() != 3){
                 cout<< line<<endl;
+                cout << line2<<endl;
+            
             }
 
+cout << endl;
 
 
            // avgRainfall(count1, count2) = ;
